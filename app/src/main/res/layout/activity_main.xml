@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarmanhinhchinh"
+                app:title="Trang Chính"
+                android:background="#FFFFd2"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <LinearLayout
+                    android:layout_gravity="top|right"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize">
+                    <ImageView
+                        android:layout_marginRight="6dp"
+                        android:id="@+id/imgsearch"
+                        android:src="@drawable/ic_search_24"
+                        android:layout_width="30dp"
+                        android:layout_height="?attr/actionBarSize"/>
+
+                    <FrameLayout
+                        android:id="@+id/framegiohang"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="?attr/actionBarSize">
+                        <com.nex3z.notificationbadge.NotificationBadge
+                            android:id="@+id/menu_sl"
+                            android:layout_gravity="top|right"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+                        <ImageView
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/ic_cart_24"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"/>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+            <ViewFlipper
+                android:id="@+id/viewflipper"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+<!--               <ImageView-->
+<!--                    android:src="@drawable/view_1"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"/>-->
+<!--                <ImageView-->
+<!--                    android:src="@drawable/view_2"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"/>-->
+<!--                <ImageView-->
+<!--                    android:src="@drawable/view_3"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"/>-->
+<!--                <ImageView-->
+<!--                    android:src="@drawable/view_4"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"/>-->
+
+            </ViewFlipper>
+            <LinearLayout
+                android:background="#ffffd2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/s_n_ph_m_m_i_nh_t"
+                    android:textColor="#FF0000"
+                    android:padding="3sp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleview"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationview"
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:layout_marginTop="10dp"
+                android:id="@+id/listviewmanhinhchinh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </ListView>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
